@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Aleksandr Sundukov](https://up.htmlacademy.ru/htmlcss/30/user/1695927).
-* Наставник: `Неизвестно`.
+* Наставник: '[Юлия Антонова] (https://htmlacademy.ru/profile/id39082)'.
 
 ---
 
