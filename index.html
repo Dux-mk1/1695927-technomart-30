@@ -16,7 +16,6 @@
           <input type="search"  name="search" placeholder="Поиск:" >
         </label>
       </form>
-    </div>
       <ul>
         <li>
           <a href="#">Закладки:0</a>
@@ -28,8 +27,9 @@
           <a href="#">Оформить заказ</a>
         </li>
       </ul>
+    </div>
     <section>
-      <h2>информация о нас</h2>
+      <h2>информация о нас</h2><!-- скрыт -->
       <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
     <div>
       <p>
@@ -43,7 +43,7 @@
     </div>
     </section>
     <section>
-      <h2>меню навигации</h2>
+      <h2>меню навигации</h2> <!-- скрыт -->
       <nav>
         <ul>
           <li>
@@ -73,59 +73,59 @@
   </header>
   <main>
     <section>
-      <h2>Промо-блок</h2>
+      <h2>Промо-блок</h2><!-- скрыт -->
       <ul>
         <li>
-          <h2>Материалы</h2>
+          <h3>Материалы</h3>
           <p>
             <a href="#"> НА ЛЮБОЙ ВКУС</a>
           </p>
         </li>
         <li>
-          <h2>Инструменты</h2>
+          <h3>Инструменты</h3>
           <p>
             <a href="#">НА ВСЕ СЛУЧАИ ЖИЗНИ</a>
           </p>
         </li>
         <li>
-          <h2>Техника</h2>
+          <h3>Техника</h3>
           <p>
             <a href="#">ДЛЯ СТРОЙКИ</a>
           </p>
         </li>
         <li>
-          <h2>Скидки 50%</h2>
+          <h3>Скидки 50%</h3>
           <p>
             <a href="#">НА 350 ТОВАРОВ</a>
           </p>
         </li>
         <li>
-          <h2>Доставка</h2>
+          <h3>Доставка</h3>
           <p>
             <a href="#">БЕСПЛАТНО</a>
           </p>
         </li>
       </ul>
-      <div><!-- добавить класс slider-->
-        <div><!-- добавить класс slides-->
-          <div><!-- добавить класс slide-->
+      <div class="slider-tools">
+        <div class="slides-tools">
+          <div class="slide-tools">
             <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="Рабочий с перфоратором штрабит стену">
             <h2>Перфораторы</h2>
             <p>Настоящие мужские игрушки</p>
             <a href="catalog.html">Открыть каталог</a>
           </div>
-          <div><!-- добавить класс slide-->
+          <div class="slide-tools">
             <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="Рабочий с дрелью сверлит стену">
             <h2>Дрели</h2>
             <p>Соседям на радость!</p>
             <a href="catalog.html">Открыть каталог</a>
           </div>
         </div>
-        <div><!-- добавить класс контроллеры-->
-          <button type="button"> &lt; </button><!-- добавить класс стрелок-->
-          <button type="button"> &gt; </button><!-- добавить класс стрелок-->
-          <button type="button"></button><!-- добавить класс кругов-->
-          <button type="button"></button><!-- добавить класс кругов -->
+        <div class="controls-tools">
+          <button type="button" class="button-arrow"> &lt; </button>
+          <button type="button" class="button-arrow"> &gt; </button>
+          <button type="button" class="button-circle"></button>
+          <button type="button" class="button-circle"></button>
         </div>
       </div>
     </section>
@@ -166,7 +166,7 @@
         <li>
           <img src="https://via.placeholder.com/127x112" alt="Фото товара: BOSCH BFG 2000" width="127" height="112" >
           <a href="#">
-            <h2>Перфоратор BOSCH BFG 2000</h2>
+            <h3>Перфоратор BOSCH BFG 2000</h3>
             <p>
               <s>22500 Р.</s>
             </p>
@@ -224,31 +224,31 @@
     </section>
     <section>
       <div>
-        <h3>Сервисы</h3>
+        <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       </div>
-      <div><!-- добавить класс slider-->
-        <div><!-- добавить класс slides-->
-          <div><!-- добавить класс slide-->
+      <div class="slider-service">
+        <div class="slides-service">
+          <div class="slide-service">
             <img src="https://via.placeholder.com/468x261" alt="Нарисованный грузовик" width="468" height="261">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
           </div>
-          <div><!-- добавить класс slide-->
+          <div class="slide-service">
             <img src="https://via.placeholder.com/389x283" alt="Медаль 100% с лентой" width="389" height="283">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div><!-- добавить класс slide-->
+          <div class="slide-service">
             <img src="https://via.placeholder.com/465x285" alt="Бумажные деньги и монета на фоне кредитного договора" width="465" height="285">
-            <h2>Кредит</h2>
+            <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
           </div>
         </div>
-        <div><!-- добавить класс контроллеры-->
-          <button type="button">Доставка</button><!-- добавить класс-->
-          <button type="button">Гарантия</button><!-- добавить класс-->
-          <button type="button">Кредит</button><!-- добавить класс-->
+        <div class="controls-service">
+          <button type="button" class="button-service">Доставка</button>
+          <button type="button" class="button-service">Гарантия</button>
+          <button type="button" class="button-service">Кредит</button>
         </div>
       </div>
     </section>
