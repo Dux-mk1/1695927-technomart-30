@@ -38,8 +38,11 @@
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
     </div>
     <div>
-      <p>Равшан Джамшутович</p>
+      <a href="#">Равшан Ддамшутович</a> <!-- сылка личный кабинет -->
       <ul>
+        <li>
+          <a href="#"></a> <!-- через бэкграунд делаем иконку выхода-->
+        </li>
         <li>
           <a href="#">Мои заказы</a>
         </li>
@@ -79,24 +82,22 @@
   </section>
 </header>
 <main>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html"></a> <!-- через бэкграунд добавим знак домика -->
-        </li>
-        <li>
-          <a href="catalog.html">Каталог</a>
-        </li>
-        <li>
-          <a href="#">Инструменты</a>
-        </li>
-        <li>
-          <a href="#">Перфораторы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div>
+    <ul>
+      <li>
+        <a href="index.html"></a> <!-- через бэкграунд добавим знак домика -->
+      </li>
+      <li>
+        <a href="catalog.html">Каталог</a>
+      </li>
+      <li>
+        <a href="#">Инструменты</a>
+      </li>
+      <li>
+        <a href="#">Перфораторы</a>
+      </li>
+    </ul>
+  </div>
   <div>
     <h2>Перфораторы</h2>
   </div>
@@ -104,15 +105,13 @@
     <h2>Фильтр товаров</h2><!-- скрыт -->
     <div>
       <h3>Фильтр:</h3>
-      <label>
-        <input type="range" min="0" max="40000" value="0" class="slider-price">
-      </label>
-      <label>
-        <input type="range" min="0" max="40000" value="30000" class="slider-price"> <!-- знаю что у нас один ползунок,
-                                                                                        но я понятия не имею как сделать на нём вторую точку.
-                                                                                        возможно это будет наложением со скрытием от пользователя
-                                                                                        одного из диапазонов и сохранением точки-->
-      </label>
+      <div class="range-slider">
+      <span class="range-slider-bar">
+      <span class="range-slider-progress" style="left:20%;width:50%"></span>
+      <button class="range-slider-toggler" type="button" style="left:20%" aria-label="Выбрать минимальное значение"></button>
+      <button class="range-slider-toggler" type="button" style="left:70%" aria-label="Выбрать максимальное значение"></button>
+      </span>
+      </div>
       <label>
         <input type="number" value="0" class="filter-price">-<!-- через js подвяжем значения к ползункам, нашёл скрипт на gh
                                                                             (если конечно можно использовать готовые скрипты) -->
@@ -151,16 +150,16 @@
         <legend>ПИТАНИЕ:</legend>
         <ul>
           <li>
-            <input class="filter-power_supply" type="radio" value="rechargeable_batteries" name="Аккумуляторные" id="filter-rechargeable_batteries" checked>
+            <input class="filter-power_supply" type="radio" value="rechargeable_batteries" name="type_of_power_supply" id="filter-rechargeable_batteries" checked>
             <label for="filter-rechargeable_batteries">Аккумуляторные</label>
           </li>
           <li>
-            <input class="filter-power_supply" type="radio" value="electric_grid" name="electric_grid" id="filter-electric_grid">
+            <input class="filter-power_supply" type="radio" value="electric_grid" name="type_of_power_supply" id="filter-electric_grid">
             <label for="filter-electric_grid">Сетевые</label>
           </li>
         </ul>
       </fieldset>
-      <label for="filter-send"></label>
+
       <input type="submit" value="Показать" name="filter-show" id="filter-send">
     </form>
   </section>
@@ -168,147 +167,143 @@
     <h3>Сортировка:</h3> <!-- реализация работы через js  -->
     <ul>
       <li>
-        <label for="sorting-price"></label>
-        <input type="submit" value="По цене" name="sorting-price" id="sorting-price">
+        <a href="#">По цене</a>
       </li>
       <li>
-        <label for="sorting-type"></label>
-        <input type="submit" value="По типу" name="sorting-type" id="sorting-type">
+        <a href="#">По типу</a>
       </li>
       <li>
-        <label for="sorting-functionality"></label>
-        <input type="submit" value="По функицоналу" name="sorting-functionality" id="sorting-functionality">
-      </li>
-      <li>
-        <label for="sorting-up_arrow"></label>
-        <input type="submit" value="&#9650;" name="sorting-up_arrow" id="sorting-up_arrow">
-      </li>
-      <li>
-        <label for="sorting-down_arrow"></label>
-        <input type="submit" value="&#9660;" name="sorting-down_arrow" id="sorting-down_arrow">
+        <a href="#">По функицоналу</a>
       </li>
     </ul>
-    <!-- добавить скрипт -->
+    <ul>
+      <li>
+        <a href="#">&#9650;</a>
+      </li>
+      <li>
+        <a href="#">&#9660;</a>
+      </li>
+    </ul>
   </div>
   <section>
     <h2>Товары</h2><!-- скрыт -->
     <ul>
       <li>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 6000</a>
+        <p>
+          <s>30500 Р.</s>
+        </p>
+        <p>25500 Р.</p>
+      </li>
+      <li>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 6000</a>
+        <p>
+          <s>30500 Р.</s>
+        </p>
+        <p>25500 Р.</p>
+      </li>
+      <li>
+        <p>
+          <button class="button-buy" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="button-market" type="button" name="marker">В закладки</button>
+        </p>
         <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
           <h3>Перфоратор BOSCH BFG 6000</h3>
         </a>
         <p>
           <s>30500 Р.</s>
-          <button type="button">25500 Р.</button>
         </p>
+        <p>25500 Р.</p>
       </li>
       <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 6000</h3>
-        </a>
-        <p>
-          <s>30500 Р.</s>
-          <button type="button">25500 Р.</button>
-        </p>
-      </li>
-      <li>
-        <p>
-          <button type="button" name="buy" id="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
-          <button type="button" name="marker" id="marker">В закладки</button>
-        </p>
-        <a href="#">
-          <h3>Перфоратор BOSCH BFG 6000</h3>
-        </a>
-        <p>
-          <s>30500 Р.</s>
-          <button type="button">25500 Р.</button>
-        </p>
-      </li>
-      <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 3000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 3000</h3>
-        </a>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 3000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 3000</a>
         <p>
           <s>22500 Р.</s>
-          <button type="button">15500 Р.</button>
         </p>
+        <p>15500 Р.</p>
       </li>
       <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 6000</h3>
-        </a>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 6000</a>
         <p>
           <s>30500 Р.</s>
-          <button type="button">25500 Р.</button>
         </p>
+        <p>25500 Р.</p>
       </li>
       <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 2000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 2000</h3>
-        </a>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 2000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 2000</a>
         <p>
           <s></s>
-          <button type="button">12500 Р.</button>
         </p>
+        <p>12500 Р.</p>
       </li>
       <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 3000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 3000</h3>
-        </a>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 3000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 3000</a>
         <p>
           <s>22500 Р.</s>
-          <button type="button">15500 Р.</button>
         </p>
+        <p>15500 Р.</p>
       </li>
       <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 6000</h3>
-        </a>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/144x128" width="144" height="128" alt="фото перфоратора BOSCH BFG 6000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+        <a href="#">Перфоратор BOSCH BFG 6000</a>
         <p>
           <s>30500 Р.</s>
-          <button type="button">25500 Р.</button>
         </p>
+        <p>25500 Р.</p>
       </li>
       <li>
-        <a href="#">
-          <p>
-            <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 2000">
-            <img src="https://via.placeholder.com/100x30" width="100" height="30" alt="new">
-          </p>
-          <h3>Перфоратор BOSCH BFG 2000</h3>
-        </a>
+        <div>
+          <img class="first_block" src="https://via.placeholder.com/127x112" width="127" height="112" alt="фото перфоратора BOSCH BFG 2000">
+          <span class="new_product">Новый продукт</span><!-- скрыт -->
+          <button class="buy-second_block" type="button" name="buy">Купить</button> <!-- добавить суда пулпап добавления в корзину -->
+          <button class="market-second_block" type="button" name="marker">В закладки</button>
+        </div>
+          <a href="#">Перфоратор BOSCH BFG 2000</a>
         <p>
           <s></s>
-          <button type="button">12500 Р.</button>
         </p>
+        <p>12500 Р.</p>
       </li>
     </ul>
     <ul>
@@ -332,7 +327,6 @@
       Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
       В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
   </aside>
-
 </main>
 <footer>
   <section>
