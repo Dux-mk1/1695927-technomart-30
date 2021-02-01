@@ -11,8 +11,9 @@
   --header-top: #293449;
   --background-head: #F9F5F0;
   --background-delivery: #FFC047;
-  --background-special-white: rgba(0, 0, 0, 0.0001);
-  --special-ylellow: #FFBF47;
+  --background-medium-color-slide: #917f6e;
+  --background-svg-social: #212A3A;
+  --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
   --special-greenlight: #8ED78F;
@@ -21,7 +22,6 @@
   --special-greylight: rgba(197,197,197,0.3);
   --special-greydark: rgba(169,169,169,0.3);
   --success: #5FBB2D;
-  --warning: #FFBF47;
   --error: #BA2732;
   --border: #EAEAEA;
   --header-nav-active: #161D29;
@@ -195,6 +195,7 @@ img {
   list-style: none;
   box-shadow: var(--shadow-header-nav);
 }
+
 .nav-link{
   color: var(--white);
 }
@@ -208,7 +209,7 @@ img {
 }
 
 .item-material{
-  background: var(--special-yellowlight);
+  background: var(--special-yellow);
 }
 
 .item-instrument{
@@ -239,12 +240,16 @@ img {
   text-transform: uppercase;
 }
 
+.img-slide{
+  background: var(--background-medium-color-slide);
+}
+
 .slide-head{
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
   color: var(--white);
-  background: var(--black); /* задал временно чтобы видеть что оно там есть, потом удалить*/
+  background: var(--background-medium-color-slide);
   text-transform: uppercase;
 }
 
@@ -253,7 +258,7 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
-  background: var(--black); /* задал временно чтобы видеть что оно там есть, потом удалить*/
+  background: var(--background-medium-color-slide);
 }
 
 .button{
@@ -277,7 +282,7 @@ img {
 
 .list-popular-product{
   list-style: none;
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -367,10 +372,25 @@ img {
   box-shadow: var(--shadow-slider-service-no-active);
   display: block;
   border: none;
+  position: relative;
+}
+
+.button-service::before{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon/layer-118.svg");
+  background: var(--white);
+  opacity: .25;
+  fill: var(--white);
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 279px;
 }
 
 .slide-text-service{
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -404,7 +424,7 @@ img {
 }
 
 .text-benefits{
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -422,7 +442,7 @@ img {
 }
 
 .text-contacts{
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -515,7 +535,6 @@ img {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
-  background-position: 0 0;
   opacity: .3;
   fill: var(--white);
 }
@@ -570,7 +589,6 @@ img {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
-  background-position: 0 0;
   background-image: url("../img/icon/icon-phone.svg");
   opacity: .3;
   fill: var(--white);
@@ -627,11 +645,11 @@ img {
 .button:active{
   background: var(--active-button);
 }
+
 .buy-second-block::before{
   content: "";
   position: absolute;
   background-repeat: no-repeat;
-  background-position: 0 0;
   background-image: url("../img/icon/cart.svg");
   opacity: .3;
   fill: var(--white);
@@ -640,6 +658,7 @@ img {
   width: 15px;
   height: 15px;
 }
+
 .buy-second-block{
   background: var(--basic-green);
   border-radius: 2px;
@@ -689,4 +708,36 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.nav-footer-link:hover{
+  text-decoration-line: underline;
+}
+
+.-nav-footer-link:active{
+  opacity: 0.5;
+}
+
+.producer-link:hover,
+.feedback-link:hover{
+  text-decoration-line: underline;
+}
+
+.producer-link:active,
+.feedback-link:active{
+  color: var(--basic-red);
+  text-decoration-line: none;
+}
+
+.svg-social{
+  fill: var(--background-svg-social);
+}
+
+.footer-social-link:hover .svg-social,
+.footer-social-link:active .svg-social{
+  fill: var(--basic-red);
+}
+
+.small-map{
+  background: var(--background-medium-color-slide);
 }
