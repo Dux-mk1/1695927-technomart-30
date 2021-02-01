@@ -89,6 +89,7 @@ img {
   color: var(--white);
   background: var(--header-top);
   border: none;
+
 }
 
 .svg-search{
@@ -96,8 +97,29 @@ img {
   opacity: 0.3;
 }
 
-.search::placeholder {
+.searching::placeholder {
   color: var(--white);
+}
+
+.search-label:hover .svg-search {
+  opacity: 1;
+}
+
+.search-label:active .search::placeholder{
+  opacity: .5;
+}
+
+.search-label:active .svg-search{
+  opacity: .5;
+}
+
+.searching:focus{
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.searching:focus + .svg-search{ /* я понятия не имею почему эта лупа залупается и не красится */
+  fill: var(--basic-red);
 }
 
 .list-header{
@@ -322,16 +344,6 @@ img {
   text-transform: uppercase;
 }
 
-.button-service:focus{
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 30px;
-  color: var(--header-nav);
-  background: var(--white);
-  box-shadow: var(--shadow-slider-service-active);
-  display: block;
-}
-
 .button-service:active {
   font-weight: bold;
   font-size: 21px;
@@ -368,6 +380,16 @@ img {
   font-size: 30px;
   line-height: 30px;
   color: var(--header-nav);
+}
+
+.button-service:focus{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--header-nav);
+  background: var(--white);
+  box-shadow: var(--shadow-slider-service-active);
+  display: block;
 }
 
 .header-benefits{
@@ -489,10 +511,6 @@ img {
   border-radius: 2px;
 }
 
-.search-label:hover .svg-search{
-  opacity: 1;
-}
-
 .link-item::before{
   content: "";
   position: absolute;
@@ -546,16 +564,6 @@ img {
 .link-item{
   color: var(--white);
   position: relative;
-}
-
-.search:focus{
-  background: var(--white);
-}
-
-.search:focus .svg-search{ /* я понятия не имею почему эта лупа залупается и не красится */
-  fill: var(--basic-red);
-  background: var(--white);
-  opacity: 1;
 }
 
 .phone::before{
