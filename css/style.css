@@ -119,7 +119,7 @@ img {
   background-color: var(--white);
 }
 
-.searching:focus + .svg-search{ /* я понятия не имею почему эта лупа залупается и не красится */
+.searching:focus + .svg-search{
   fill: var(--basic-red);
 }
 
@@ -807,7 +807,8 @@ img {
   left: 65px;
 }
 
-.item-account:hover::after{   /*как лучше сделать?*/
+.item-account:hover::after{   /*как лучше сделать взаимодействие с псевдоэлементом? не понял как
+                              сделать изменеие цвета псевдоэлемента при взаимодействии с ссылкой*/
   background-color: var(--basic-red);
 }
 
