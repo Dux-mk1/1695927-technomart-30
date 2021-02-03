@@ -12,9 +12,14 @@
   --background-delivery: #FFC047;
   --background-medium-color-slide: #917f6e;
   --background-svg-social: #212A3A;
+  --background-head-sort:#F2F6F8;
+  --background-sort: #F7F3EC;
+  --background-darkgrey:#ABABAB;
+  --background-popup-basket: #F1F1F1;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
+  --special-grey: #C1C6CE;
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
   --special-white: rgba(255, 255, 255, 0.3);
@@ -23,6 +28,7 @@
   --success: #5FBB2D;
   --error: #BA2732;
   --border: #EAEAEA;
+  --border-send-form: #E5E5E5;
   --header-nav-active: #161D29;
   --light-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
   --shadow-logo:inset 0px -5px 0px rgba(0, 0, 0, 0.24);
@@ -45,7 +51,7 @@
   min-width: 940px;
   margin: 0;
   padding: 0;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -262,6 +268,10 @@ img {
   color: var(--white);
   display: block;
   text-transform: uppercase;
+}
+
+.button-border-none{
+  border:none;
 }
 
 .button-price{
@@ -733,4 +743,373 @@ img {
 
 .small-map{
   background: var(--background-medium-color-slide);
+}
+
+/* CATALOG*/
+.cart-mark{
+  background: var(--basic-red);
+}
+
+.user-profile{
+  color: var(--black);
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.icon-user-profile{
+  fill: var(--basic-greylight);
+}
+
+.user-profile:hover  .icon-user-profile{
+  fill: var(--basic-grey);
+}
+
+.user-profile:active{
+  fill: var(--basic-greylight);
+  color: var(--basic-greylight);
+
+}
+
+.user-profile:active .icon-user-profile{
+  fill: var(--basic-greylight);
+}
+
+.log-out{
+  fill: var(--basic-greylight);
+}
+
+.log-out:hover{
+  fill: var(--basic-grey);
+}
+
+.log-out:active{
+  fill: var(--basic-greylight);
+}
+
+.link-account{
+  color: var(--header-nav);
+  position: relative;
+}
+
+.item-account{
+  position: relative;
+}
+
+.item-account::after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--header-nav);
+  border-radius: 50%;
+  top: 10px;
+  left: 65px;
+}
+
+.item-account:hover::after{   /*как лучше сделать?*/
+  background-color: var(--basic-red);
+}
+
+.item-account:active::after{
+  background-color: var(--basic-greylight);
+}
+
+.item-account:last-child::after{
+  display: none;
+}
+
+.link-account:hover{
+  color: var(--basic-red);
+}
+
+.link-account:active{
+  color: var(--basic-greylight);
+}
+
+.icon-point{
+  fill: var(--header-nav);
+}
+
+.list-account:hover .icon-point{
+  fill: var(--basic-red);
+}
+
+.list-account:active .icon-point{
+  fill: var(--basic-greylight);
+}
+
+.main-catalog{
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--black);
+}
+
+.list-crumbs{
+  color: var(--black);
+  list-style: none;
+}
+
+.link-crumbs{
+  color: var(--black);
+}
+
+.item-crumbs{
+  position: relative;
+}
+
+.item-crumbs::after{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon/shape.svg);
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 12px;
+
+}
+
+.home-page{
+  position: relative;
+}
+
+.home-page::before{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon/icon-home.svg");
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 12px;
+}
+
+.head-sort{
+  font-family: Cuprum,Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--header-nav);
+  background: var(--background-head-sort);
+}
+
+.head-filter,
+.sort-head{
+  background: var(--background-sort);
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.filter-price{
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.range-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 21px;
+  width: 218px;
+  height: 36px;
+  background: var(--background-sort);
+  border-radius: 0;
+}
+
+.range-slider-bar {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: var(--background-sort);
+}
+
+.range-slider-progress {
+  position: absolute;
+  height: 100%;
+  background-color: var(--success);
+}
+
+.range-slider-toggler {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--background-darkgrey);
+  border: 8px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter-write-price{
+  background: var(--background-sort);
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 18px;
+  border: 0 solid var(--white);
+}
+
+.filter-producer,
+.filter-power{
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.list-filter-producer,
+.list-filter-power{
+  list-style: none;
+}
+
+.item-filter-producer,
+.item-filter-power{
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.button-send-form{
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  background: var(--white);
+  border: 1px solid var(--border-send-form);
+  box-sizing: border-box;
+}
+
+.list-sort{
+  list-style: none;
+  background: var(--background-sort);
+}
+
+.link-sort{
+  opacity: 0.3;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--basic-red);
+  color: var(--black);
+}
+
+.link-sort:hover{
+  opacity: 1;
+  text-decoration: none;
+  border-bottom: 1px solid var(--basic-red);
+}
+
+.link-sort:focus{
+  color: var(--basic-red);
+  border-bottom: 1px solid var(--background-sort);
+  opacity: 1;
+}
+
+.list-sort-arrow{
+  list-style: none;
+}
+
+.link-sort-arrow{
+  fill: var(--basic-greylight);
+}
+
+.link-sort-arrow:hover{
+  fill: var(--black);
+}
+
+.link-sort-arrow:focus{
+  fill: var(--basic-red);
+}
+
+.rotate{
+  transform: rotate(180deg);
+}
+
+.list-page-catalog{
+  list-style: none;
+}
+
+.link-page-catalog{
+  color: var(--black);
+  border: 1px solid var(--border-send-form);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.link-page-catalog:hover{
+  border: 1px solid var(--basic-greylight);
+}
+
+.link-page-catalog:active{
+  border: 1px solid var(--basic-red);
+}
+
+.link-page-catalog:focus,
+.link-page-catalog-default{ /* тут кнопка первой страницы активна всегда, даже при нажатии других клавиш.
+                            я не знаю делать её активной постоянно(тк у нас всего одна страница)
+                            или же сделать чтобы она не была активна постоянно и как другие активировалась
+                            при нажатии*/
+  border: 1px solid var(--basic-red);
+  background: var(--basic-red);
+  color: var(--white);
+}
+
+.aside-brief-description-selected-product{
+  background: var(--basic-background);
+}
+
+.head-brief-description-selected-product{
+  font-family: Cuprum, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--black);
+}
+
+.text--brief-description-selected-product{
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.button-popup-basket{
+  color: var(--black);
+  background: var(--white);
+  border: none;
+}
+
+.buttons-popup-basket{
+  background: var(--background-popup-basket);
+}
+
+.text-popup-basket{
+  position: relative;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.text-popup-basket::before{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon/icon-mark.svg");
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 66px;
+  height: 66px;
 }
