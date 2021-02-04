@@ -44,7 +44,7 @@
   --hover-button: #CA2C37;
   --active-header-nav: #1D2739;
   --active-button: #BA2732;
-  --active-buy-second-block: #518534;
+  --cart-btn: #518534;
 }
 
 .page-body{
@@ -123,7 +123,7 @@ img {
   fill: var(--basic-red);
 }
 
-.list-header{
+.header-list{
   list-style: none;
   font-weight: normal;
   font-size: 18px;
@@ -131,7 +131,7 @@ img {
   color: var(--white);
 }
 
-.item-header{
+.header-item{
   color: var(--white);
 }
 
@@ -192,7 +192,7 @@ img {
   background: var(--header-nav);
 }
 
-.list-nav{
+.nav-list{
   list-style: none;
   box-shadow: var(--shadow-header-nav);
 }
@@ -209,27 +209,27 @@ img {
   color: var(--white);
 }
 
-.item-material{
+.material-item{
   background: var(--special-yellow);
 }
 
-.item-instrument{
+.instrument-item{
   background: var(--special-blue);
 }
 
-.item-cars{
+.cars-item{
   background: var(--special-lilac);
 }
 
-.item-sale{
+.sale-item{
   background: var(--special-greenlight);
 }
 
-.item-delivery{
+.delivery-item{
   background: var(--background-delivery);
 }
 
-.item-wrapper{
+.wrapper-item{
   background: var(--special-white);
 }
 
@@ -283,7 +283,7 @@ img {
 
 }
 
-.list-popular-product{
+.products-list{
   list-style: none;
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
@@ -292,10 +292,6 @@ img {
   line-height: 20px;
 }
 
-.item-popular-product{
-  font-size: 18px;
-  line-height: 20px;
-}
 
 .popular-products{
   color: var(--header-nav);
@@ -312,14 +308,15 @@ img {
 
 }
 
-.link-popular-product{
+.product-title{
   font-size: 18px;
   line-height: 20px;
   color: var(--black);
   text-transform: uppercase;
+  display: block;
 }
 
-.sale-popular-product{
+.old-price{
   font-size: 17px;
   line-height: 18px;
   color: var(--sale);
@@ -432,7 +429,7 @@ img {
   font-weight: normal;
 }
 
-.item-partners-delivery{
+.partners-delivery-item{
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -472,7 +469,7 @@ img {
   color: var(--footer-special-white-address);
 }
 
-.footer-list-nav{
+.footer-nav-list{
   list-style: none;
 }
 
@@ -495,7 +492,7 @@ img {
   color: var(--white);
 }
 
-.footer-list-social{
+.footer-social-list{
   list-style: none;
 }
 
@@ -534,7 +531,7 @@ img {
   border-radius: 2px;
 }
 
-.link-item::before{
+.item-link::before{
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -571,7 +568,7 @@ img {
   opacity: .3;
 }
 
-.item-header:active{
+.header-item:active{
   background: var(--header-nav-active);
 }
 
@@ -583,7 +580,7 @@ img {
   background: var(--basic-green);
 }
 
-.link-item{
+.item-link{
   color: var(--white);
   position: relative;
 }
@@ -625,19 +622,19 @@ img {
   opacity: 1;
 }
 
-.item-nav:hover{
+.nav-item:hover{
   background: var(--header-top);
 }
 
-.item-nav:active{
+.nav-item:active{
   background: var(--active-header-nav);
 }
 
-.item-wrapper:hover{
+.wrapper-item:hover{
   background: var(--special-greylight);
 }
 
-.item-wrapper:active{
+.wrapper-item:active{
   background: var(--special-greydark);
 }
 
@@ -649,7 +646,7 @@ img {
   background: var(--active-button);
 }
 
-.buy-second-block::before{
+.cart-btn::before{
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -662,7 +659,7 @@ img {
   height: 15px;
 }
 
-.buy-second-block{
+.cart-btn{
   background: var(--basic-green);
   border-radius: 2px;
   box-shadow: var(--shadow-product-buy);
@@ -673,23 +670,23 @@ img {
   position: relative;
 }
 
-.buy-second-block:hover{
+.cart-btn:hover{
   background: var(--success);
 }
 
-.buy-second-block:active{
-  background: var(--active-buy-second-block);
+.cart-btn:active{
+  background: var(--cart-btn);
 }
 
-.market-second-block:hover{
+.bookmarks-btn:hover{
   border: 3px solid var(--header-nav);
 }
 
-.market-second-block:active{
+.bookmarks-btn:active{
   opacity: .5;
 }
 
-.market-second-block{
+.bookmarks-btn{
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -787,16 +784,24 @@ img {
   fill: var(--basic-greylight);
 }
 
-.link-account{
+.account-link{
   color: var(--header-nav);
   position: relative;
 }
 
-.item-account{
+.account-link:hover{
+  color: var(--basic-red);
+}
+
+.account-link:active{
+  color: var(--basic-greylight);
+}
+
+.account-item{
   position: relative;
 }
 
-.item-account::after{
+.account-item::after{
   content: "";
   position: absolute;
   width: 5px;
@@ -807,24 +812,31 @@ img {
   left: 65px;
 }
 
-.item-account:hover::after{   /*как лучше сделать взаимодействие с псевдоэлементом? не понял как
-                              сделать изменеие цвета псевдоэлемента при взаимодействии с ссылкой*/
+.account-item:hover::after{
   background-color: var(--basic-red);
 }
 
-.item-account:active::after{
-  background-color: var(--basic-greylight);
-}
-
-.item-account:last-child::after{
-  display: none;
-}
-
-.link-account:hover{
+.account-item:hover .account-link{
   color: var(--basic-red);
 }
 
-.link-account:active{
+.account-item:active::after{
+  background-color: var(--basic-greylight);
+}
+
+.account-item:active .account-link{
+  color: var(--basic-greylight);
+}
+
+.account-item:last-child::after{
+  display: none;
+}
+
+.account-link:hover{
+  color: var(--basic-red);
+}
+
+.account-link:active{
   color: var(--basic-greylight);
 }
 
@@ -832,11 +844,11 @@ img {
   fill: var(--header-nav);
 }
 
-.list-account:hover .icon-point{
+.account-list:hover .icon-point{
   fill: var(--basic-red);
 }
 
-.list-account:active .icon-point{
+.account-list:active .icon-point{
   fill: var(--basic-greylight);
 }
 
@@ -849,20 +861,21 @@ img {
   color: var(--black);
 }
 
-.list-crumbs{
+.crumbs-list{
   color: var(--black);
   list-style: none;
+  text-transform: uppercase
 }
 
-.link-crumbs{
+.crumbs-link{
   color: var(--black);
 }
 
-.item-crumbs{
+.crumbs-item{
   position: relative;
 }
 
-.item-crumbs::after{
+.crumbs-item::after{
   content: "";
   position: absolute;
   background-repeat: no-repeat;
@@ -890,7 +903,7 @@ img {
   height: 12px;
 }
 
-.head-sort{
+.page-title{
   font-family: Cuprum,Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -971,18 +984,20 @@ img {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+  text-transform: uppercase
 }
 
-.list-filter-producer,
-.list-filter-power{
+.filter-producer-list,
+.filter-power-list{
   list-style: none;
 }
 
-.item-filter-producer,
-.item-filter-power{
+.filter-producer-item,
+.filter-power-item{
   font-weight: normal;
   font-size: 15px;
   line-height: 19px;
+  text-transform: uppercase
 }
 
 .button-send-form{
@@ -994,43 +1009,45 @@ img {
   box-sizing: border-box;
 }
 
-.list-sort{
+.sort-list{
   list-style: none;
   background: var(--background-sort);
 }
 
-.link-sort{
+.sort-link{
   opacity: 0.3;
   text-decoration: none;
-  border-bottom: 1px dashed var(--basic-red);
+  border-bottom: 1px dotted var(--basic-red);
   color: var(--black);
+  text-transform: uppercase
 }
 
-.link-sort:hover{
+.sort-link:hover{
   opacity: 1;
   text-decoration: none;
   border-bottom: 1px solid var(--basic-red);
 }
 
-.link-sort:focus{
+.sort-link:focus,
+.sort-link-current{
   color: var(--basic-red);
   border-bottom: 1px solid var(--background-sort);
   opacity: 1;
 }
 
-.list-sort-arrow{
+.sort-arrow-list{
   list-style: none;
 }
 
-.link-sort-arrow{
+.sort-arrow-link{
   fill: var(--basic-greylight);
 }
 
-.link-sort-arrow:hover{
+.-sort-arrow-link:hover{
   fill: var(--black);
 }
 
-.link-sort-arrow:focus{
+.sort-arrow-link:focus{
   fill: var(--basic-red);
 }
 
@@ -1038,40 +1055,38 @@ img {
   transform: rotate(180deg);
 }
 
-.list-page-catalog{
+.page-catalog-list{
   list-style: none;
 }
 
-.link-page-catalog{
+.page-catalog-link{
   color: var(--black);
   border: 1px solid var(--border-send-form);
   box-sizing: border-box;
   border-radius: 2px;
 }
 
-.link-page-catalog:hover{
+.page-catalog-link:hover{
   border: 1px solid var(--basic-greylight);
 }
 
-.link-page-catalog:active{
+.page-catalog-link:focus,
+.page-catalog-link:active{
   border: 1px solid var(--basic-red);
 }
 
-.link-page-catalog:focus,
-.link-page-catalog-default{ /* тут кнопка первой страницы активна всегда, даже при нажатии других клавиш.
-                            я не знаю делать её активной постоянно(тк у нас всего одна страница)
-                            или же сделать чтобы она не была активна постоянно и как другие активировалась
-                            при нажатии*/
+.page-catalog-current-link{
   border: 1px solid var(--basic-red);
   background: var(--basic-red);
   color: var(--white);
+  border-radius: 2px;
 }
 
-.aside-brief-description-selected-product{
+.product-description{
   background: var(--basic-background);
 }
 
-.head-brief-description-selected-product{
+.head-product-description{
   font-family: Cuprum, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1080,7 +1095,7 @@ img {
   color: var(--black);
 }
 
-.text--brief-description-selected-product{
+.text-product-description{
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
