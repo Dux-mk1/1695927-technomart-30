@@ -415,7 +415,8 @@ img {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 18px;
   grid-template-columns: 220px 220px 220px;
 }
 
