@@ -31,7 +31,6 @@
   --border: #EAEAEA;
   --border-send-form: #E5E5E5;
   --header-nav-active: #161D29;
-  --light-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
   --shadow-logo:inset 0px -5px 0px rgba(0, 0, 0, 0.24);
   --shadow-slider-service-active: 0px 1px 0px #FFFFFF;
   --shadow-slider-service-no-active:0px 1px 0px #293449, inset 0px 1px 0px #405069;
@@ -78,7 +77,7 @@ img {
 }
 
 .main-header{
-  background: var(--light-grey);
+  background: var(--basic-background);
   color: var(--white);
 }
 
