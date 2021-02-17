@@ -301,7 +301,8 @@ img {
 
 .nav-link{
   color: var(--white);
-  align-items: center;
+  display: inline-block;
+  padding: 16px 24px 20px 27px;
 }
 
 .container {
@@ -354,10 +355,17 @@ img {
 
 .promo-item{
   width: 300px;
-  height: 123px;
   position: relative;
   padding: 20px 23px;
   box-sizing: border-box;
+}
+
+.promo-item::before{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 34px;
+  right: 44px;
 }
 
 .material-item{
@@ -365,12 +373,7 @@ img {
 }
 
 .material-item::before{
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
   background-image: url("../img/icon/icon-1.svg");
-  top: 34px;
-  right: 44px;
   width: 44px;
   height: 65px;
 }
@@ -380,12 +383,7 @@ img {
 }
 
 .instrument-item::before{
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
   background-image: url("../img/icon/icon-2.svg");
-  top: 34px;
-  right: 44px;
   width: 75px;
   height: 61px;
 }
@@ -395,12 +393,7 @@ img {
 }
 
 .cars-item::before{
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
   background-image: url("../img/icon/icon-3.svg");
-  top: 34px;
-  right: 44px;
   width: 78px;
   height: 62px;
 }
@@ -410,12 +403,7 @@ img {
 }
 
 .sale-item::before{
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
   background-image: url("../img/icon/icon-4.svg");
-  top: 34px;
-  right: 44px;
   width: 59px;
   height: 72px;
 }
@@ -425,12 +413,7 @@ img {
 }
 
 .delivery-item::before{
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
   background-image: url("../img/icon/icon-5.svg");
-  top: 34px;
-  right: 44px;
   width: 78px;
   height: 63px;
 }
@@ -505,6 +488,7 @@ img {
   text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  border: none;
 }
 
 .button-slide{
@@ -556,10 +540,6 @@ img {
 
 .button-current{
   background-color: var(--white);
-}
-
-.button-border-none{
-  border:none;
 }
 
 .button-price{
@@ -1130,14 +1110,13 @@ img {
 
 .nav-item{
   display: flex;
-  padding: 16px 24px 20px 27px;
 }
 
-.nav-item:hover{
+.nav-link:hover{
   background: var(--header-top);
 }
 
-.nav-item:active{
+.nav-link:active{
   background: var(--active-header-nav);
 }
 
