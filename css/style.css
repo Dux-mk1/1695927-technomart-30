@@ -791,7 +791,6 @@ img {
   background-repeat: no-repeat;
   background-image: url("../img/shadow-button.png");
   background-color: var(--background-bottom-head-bar);
-  opacity: 0.25;
   top: -50px;
   left: 230px;
   width: 10px;
