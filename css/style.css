@@ -1702,6 +1702,8 @@ img {
   width: 23px;
   height: 23px;
   background-image: url("../img/icon/filter-button/checkbox-off.svg");
+  position: absolute;
+  left: -35px;
 }
 
 .filter-power-supply+label::before{
@@ -1710,6 +1712,8 @@ img {
   width: 25px;
   height: 25px;
   background-image: url("../img/icon/filter-button/radio-off.svg");
+  position: relative;
+  left: -10px;
 }
 
 .filter-producer:checked+label::before{
@@ -1718,6 +1722,8 @@ img {
   width: 27px;
   height: 23px;
   background-image: url("../img/icon/filter-button/checkbox-on.svg");
+  position: absolute;
+  left: -35px;
 }
 
 .filter-power-supply:checked+label::before{
@@ -1775,6 +1781,16 @@ img {
   line-height: 19px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  padding: 0;
+  position: relative;
+}
+
+.filter-producer-item{
+  margin-left: 35px;
+}
+
+.filter-power-item{
+  margin-left: 10px;
 }
 
 .button-send-form{
