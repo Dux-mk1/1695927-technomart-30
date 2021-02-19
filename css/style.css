@@ -1691,7 +1691,7 @@ img {
 
 .filter-producer+label,
 .filter-power-supply+label{
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   user-select: none;
 }
