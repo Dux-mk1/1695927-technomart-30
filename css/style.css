@@ -1453,31 +1453,46 @@ img {
 
 .crumbs-list{
   color: var(--black);
-  list-style: none;
-  text-transform: uppercase;
   display: flex;
-  margin: 0 0 20px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0 0 14px 0;
+  list-style: none;
   padding: 0;
 }
 
 .crumbs-link{
   color: var(--black);
-  position: relative;
+}
+
+.crumbs-item:last-child{
+  margin-right: 0;
+}
+
+.crumbs-item:first-child{
+  min-width: 14px;
 }
 
 .crumbs-item{
-  margin-right: 40px;
+  margin-right: 17px;
+  display: flex;
+  margin-bottom: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  position: relative;
 }
 
-.crumbs-link::after{
+.crumbs-item:not(:first-child)::before{
   content: "";
-  position: absolute;
-  background-repeat: no-repeat;
+  display: block;
+  align-self: center;
   background-image: url(../img/icon/shape.svg);
-  top: 2px;
-  left: -20px;
   width: 8px;
   height: 12px;
+  margin-right: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
 }
 
 .home-page{
@@ -1490,7 +1505,7 @@ img {
   background-repeat: no-repeat;
   background-image: url("../img/icon/icon-home.svg");
   opacity: 1;
-  top: 0;
+  top: 2px;
   left: 0;
   width: 14px;
   height: 12px;
@@ -1711,8 +1726,9 @@ img {
   width: 25px;
   height: 25px;
   background-image: url("../img/icon/filter-button/radio-off.svg");
-  position: relative;
-  left: -10px;
+  position: absolute;
+  left: -35px;
+  bottom: -5px;
 }
 
 .filter-producer:checked+label::before{
@@ -1731,6 +1747,9 @@ img {
   width: 25px;
   height: 25px;
   background-image: url("../img/icon/filter-button/radio-on.svg");
+  position: absolute;
+  left: -35px;
+  bottom: -5px;
 }
 
 .filter-producer:not(:disabled):not(:checked)+label:hover::before{
@@ -1782,14 +1801,7 @@ img {
   margin-bottom: 16px;
   padding: 0;
   position: relative;
-}
-
-.filter-producer-item{
   margin-left: 35px;
-}
-
-.filter-power-item{
-  margin-left: 10px;
 }
 
 .button-send-form{
@@ -1871,6 +1883,7 @@ img {
 .page-catalog-list{
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   text-align: center;
   margin: 0;
