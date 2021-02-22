@@ -474,6 +474,8 @@ img {
   position: relative;
   box-sizing: border-box;
   padding: 23px 20px 27px 24px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .img-slide{
@@ -849,6 +851,8 @@ img {
   background-position: right;
   min-height: 285px;
   min-width: 619px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .service-slide-image-1{
@@ -2210,3 +2214,7 @@ img {
   background: var(--white);
 }
 
+.slide-active{
+  opacity: 1;
+  pointer-events: auto;
+}
