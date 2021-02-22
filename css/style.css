@@ -471,7 +471,7 @@ img {
 }
 
 .slide-tools {
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   padding: 23px 20px 27px 24px;
   opacity: 0;
@@ -844,15 +844,6 @@ img {
   margin: 0 0 0 -9px;
   width: 331px;
   line-height: 24px;
-}
-
-.service-slide{
-  background-repeat: no-repeat;
-  background-position: right;
-  min-height: 285px;
-  min-width: 619px;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .service-slide-image-1{
@@ -2214,7 +2205,18 @@ img {
   background: var(--white);
 }
 
+.service-slide{
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 285px;
+  min-width: 619px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
 .slide-active{
+  position: relative;
   opacity: 1;
   pointer-events: auto;
 }
