@@ -146,9 +146,9 @@
       </div>
     </section>
     <section class="popular-products-section container">
-      <div class="popular-products">
-        <h2 class="popular-products-header">Популярные товары:</h2>
-        <a class="button button-popular-products" href="#">все популярные товары</a>
+      <div class="title-content">
+        <h2 class="title-content-header">Популярные товары:</h2>
+        <a class="button" href="#">все популярные товары</a>
       </div>
       <ul class="products-list popular-products-list">
         <li class="products-item">
@@ -234,9 +234,9 @@
       </ul>
     </section>
     <section class="popular-producer-section container">
-      <div class="popular-producer">
-        <h2 class="popular-producers-header">Популярные ПРОИзводители:</h2>
-        <a class="button button-popular-producers" href="#">все производители</a>
+      <div class="title-content">
+        <h2 class="title-content-header">Популярные ПРОИзводители:</h2>
+        <a class="button" href="#">все производители</a>
       </div>
       <ul class="company-list">
         <li class="company-item">
@@ -288,7 +288,7 @@
       </div>
       <div class="service-slider container">
         <div class="service-controls">
-          <button type="button" class="button-service">Доставка</button>
+          <button type="button" class="button-service button-service-current">Доставка</button>
           <button type="button" class="button-service">Гарантия</button>
           <button type="button" class="button-service">Кредит</button>
         </div>
@@ -299,7 +299,7 @@
           </div>
           <div class="service-slide service-slide-image-2 visually-hidden">
             <h3 class="service-header-text service-header-text-guarantee">Гарантия</h3>
-            <p class="service-slide-text service-slide-text-guarantee">Если купленный у нас товар поломается или заискрит, а&nbsp;также в случае пожара, спровоцированного его возгоранием,вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом&nbsp;уж восстановите как-нибудь сами.</p>
+            <p class="service-slide-text service-slide-text-guarantee">Если купленный у нас товар поломается или заискрит, а&nbsp;также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом&nbsp;уж восстановите как-нибудь сами.</p>
           </div>
           <div class="service-slide service-slide-image-3 visually-hidden">
             <h3 class="service-header-text service-header-text-credit">Кредит</h3>
@@ -418,24 +418,32 @@
     </section>
   </footer>
   <div class="popup-map">
+    <button class="close-popup-map" type="button" value="close-popup"></button>
     <img src="img/big-map.jpg" alt="Карта с адресом магазина Большая Конюшенная улица дом 19" width="970" height="477">
   </div>
   <div class="popup-feedback-wrapper-form">
+    <button class="close-popup-feedback" type="button" value="close-popup"></button>
     <form class="popup-feedback" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="popup-feedback-wrapper">
-        <label class="name-popup-feedback">
-          <span>Ваше имя:</span>
-          <input class="placeholder-popup border-label-popup-feedback" type="text" placeholder="Имя Фамилия">
-        </label>
-        <label class="email-popup-feedback">
-          <span>Ваш e-mail:</span>
-          <input class="placeholder-popup border-label-popup-feedback" type="email" placeholder="email@example.com">
-        </label>
-        <label class="letter-popup-feedback-text">
-          <span>Текст письма:</span>
-          <textarea class="placeholder-popup placeholder-popup-textarea border-label-popup-feedback" placeholder="В свободной форме"></textarea>
-        </label>
-      </div>
+      <ul class="popup-feedback-list">
+        <li class="popup-feedback-item">
+          <label class="popup-feedback-label">
+            <span>Ваше имя:</span>
+            <input class="placeholder-popup border-label-popup-feedback" type="text" placeholder="Имя Фамилия">
+          </label>
+        </li>
+        <li class="popup-feedback-item">
+          <label class="popup-feedback-label">
+            <span>Ваш e-mail:</span>
+            <input class="placeholder-popup border-label-popup-feedback" type="email" placeholder="email@example.com">
+          </label>
+        </li>
+        <li class="popup-feedback-item">
+          <label class="letter-popup-feedback-text">
+            <span>Текст письма:</span>
+            <textarea class="placeholder-popup placeholder-popup-textarea border-label-popup-feedback" placeholder="В свободной форме"></textarea>
+          </label>
+        </li>
+      </ul>
       <div class="popup-feedback-button-wrapper">
         <button class="button feedback-button" type="submit">Отправить</button>
       </div>
