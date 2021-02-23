@@ -30,10 +30,10 @@
       </form>
       <ul class="list-header">
         <li class="item-header">
-          <a class="bookmark item-link" href="#">Закладки:0</a>
+          <a class="bookmark item-link" href="#">Закладки: 0</a>
         </li>
         <li class="item-header">
-          <a class="item-link cart-mark" href="#">Корзина:10</a>
+          <a class="cart item-link cart-mark" href="#">Корзина: 10</a>
         </li>
         <li class="arrange-order-item">
           <a class="arrange-order-link" href="#">Оформить заказ</a>
@@ -45,7 +45,7 @@
     <div class="bottom-head-bar">
       <section class="about-company-head container">
         <h2 class="visually-hidden">информация о нас</h2>
-        <p class="activity">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <p class="activity activity-catalog">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
         <div class="contacts-header-wrapper">
           <p class="phone-wrapper-header">
             <a class="phone-header phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -223,7 +223,7 @@
         <section class="product-list-head">
           <h2 class="visually-hidden">Товары</h2>
           <ul class="products-list">
-            <li class="products-item new">
+            <li class="products-item">
               <div class="product-buttons">
                 <a href="#" class="cart-btn">
                   <span class="cart-btn-wrapper">Купить</span>
@@ -243,7 +243,7 @@
                 <span class="button-price-wrapper">25500 Р.</span>
               </p>
             </li>
-            <li class="products-item new">
+            <li class="products-item">
               <div class="product-buttons">
                 <a href="#" class="cart-btn">
                   <span class="cart-btn-wrapper">Купить</span>
@@ -303,7 +303,7 @@
                 <span class="button-price-wrapper">15500 Р.</span>
               </p>
             </li>
-            <li class="products-item new">
+            <li class="products-item">
               <div class="product-buttons">
                 <a href="#" class="cart-btn">
                   <span class="cart-btn-wrapper">Купить</span>
@@ -363,7 +363,7 @@
                 <span class="button-price-wrapper">15500 Р.</span>
               </p>
             </li>
-            <li class="products-item new">
+            <li class="products-item">
               <div class="product-buttons">
                 <a href="#" class="cart-btn">
                   <span class="cart-btn-wrapper">Купить</span>
@@ -516,9 +516,11 @@
   </section>
 </footer>
 <div class="popup-basket">
+  <button class="close-popup-basket" type="button" value="close-popup"></button>
   <p class="popup-basket-text">Товар добавлен в корзину!</p>
+  <div class="buttons-popup-basket-wrapper" ></div>
   <p class="buttons-popup-basket">
-    <a class="button button-border-none" href="#">оформить заказ</a>
+    <a class="button" href="#">оформить заказ</a>
     <button class="button-popup-basket" type="button" value="close">продолжить покупки</button>
   </p>
 </div>
