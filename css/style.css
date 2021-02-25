@@ -670,6 +670,18 @@ img {
   margin-bottom: 8px;
 }
 
+.img-product{
+  position: relative;
+  top: -2px;
+  left: -6px;
+}
+
+.no-change-position{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .popular-products-section{
   margin-bottom: 70px;
 }
@@ -2172,7 +2184,6 @@ img {
 }
 
 .popup-basket-text{
-  position: relative;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
