@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/fav/152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/fav/152.png">
@@ -516,9 +516,11 @@
   </section>
 </footer>
 <div class="popup-basket">
-  <button class="close-popup-basket" type="button" value="close-popup"></button>
+  <button class="close-popup-basket" type="button" value="close-popup">
+    <span class="visually-hidden">Закрыть</span>
+  </button>
   <p class="popup-basket-text">Товар добавлен в корзину!</p>
-  <div class="buttons-popup-basket-wrapper" ></div>
+  <div class="buttons-popup-basket-wrapper"></div>
   <p class="buttons-popup-basket">
     <a class="button" href="#">оформить заказ</a>
     <button class="button-popup-basket" type="button" value="close">продолжить покупки</button>
