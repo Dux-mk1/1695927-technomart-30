@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/fav/152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/fav/152.png">
@@ -17,14 +17,14 @@
 <header class="main-header-catalog">
   <div class="top-head-bar">
     <div class="header container">
-      <a class="main-logo-header" href="index.html">
+      <a class="main-logo-header" href="index.html" aria-label="Главная страница интернет магазина Техномарт">
         <img class="main-logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
       </a>
       <form class="search-form" action="https://echo.htmlacademy.ru/">
         <div class="search">
-          <label for="searching"></label>
+          <label for="searching" aria-label="Поиск товаров"></label>
           <input id="searching" class="searching" type="search"  name="search" placeholder="Поиск:" >
-          <svg class="svg-search" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" focusable="false" class="svg-search" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
           </svg>
         </div>
@@ -49,20 +49,20 @@
         <p class="activity activity-catalog">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
         <div class="contacts-header-wrapper">
           <p class="phone-wrapper-header">
-            <a class="phone-header phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <a class="phone-header phone" href="tel:+78125550555" aria-label="Телефон обратной связи">+7 (812) 555-05-55</a>
           </p>
           <p class="address-header">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="account">
           <div class="account-background">
-            <a class="user-profile" href="#">
-              <svg class="icon-user-profile" width="20" height="18"  xmlns="http://www.w3.org/2000/svg">
+            <a class="user-profile" href="#" aria-label="Личный кабинет">
+              <svg aria-hidden="true" focusable="false" class="icon-user-profile" width="20" height="18"  xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z"/>
               </svg>
               <span class="name-user">Равшан Джамшутович</span>
             </a>
-            <a class="log-out" href="#">
-              <svg class="icon-log-out"  width="20" height="17" xmlns="http://www.w3.org/2000/svg">
+            <a class="log-out" href="#" aria-label="Выйти из личного кабинета">
+              <svg aria-hidden="true" focusable="false" class="icon-log-out"  width="20" height="17" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0v6h-6v5h6v6L20 8.5z"/>
                 <path d="M2.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H3.116C.938 0 .112 1.81.087 3.027v10.946C.112 15.189.938 17 3.116 17h5.027v-1.99H3.116c-.839 0-.992-.683-1.01-1.058z"/>
               </svg>
@@ -113,7 +113,7 @@
   <div class="container">
     <ul class="crumbs-list">
       <li class="crumbs-item">
-        <a class="home-page" href="index.html"></a>
+        <a class="home-page visually-hidden" href="index.html" aria-label="Перейти на главную страницу"></a>
       </li>
       <li class="crumbs-item">
         <a class="crumbs-link" href="catalog.html">Каталог</a>
@@ -129,7 +129,7 @@
     <section class="catalog">
       <section class="filter">
         <h2 class="filter-head">Фильтр:</h2>
-        <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="get">
+        <form class="filter-form" action="https://echo.htmlacademy.ru/courses" target="_blank" method="get">
           <fieldset class="filter-fieldset">
             <legend class="filter-price">Цена:</legend>
             <div class="range-slider">
@@ -140,10 +140,14 @@
               </span>
             </div>
             <div class="filter-write-price-wrapper">
-              <label for="filter-write-price-min"></label>
+              <label for="filter-write-price-min">
+                <span class="visually-hidden">Минимальная цена товара</span>
+              </label>
               <input id="filter-write-price-min" class="filter-write-price" type="number" value="0" >
               <span>-</span>
-              <label for="filter-write-price-max"></label>
+              <label for="filter-write-price-max">
+                <span class="visually-hidden">Максимальная цена товара</span>
+              </label>
               <input id="filter-write-price-max" class="filter-write-price" type="number" value="30000">
             </div>
           </fieldset>
@@ -151,23 +155,23 @@
             <legend class="filter-producer-head">Производители:</legend> <!-- радио кнопки потом допилить -->
             <ul class="filter-producer-list">
               <li class="filter-producer-item">
-                <input class="filter-producer" type="checkbox" name="bosh" id="filter-bosh" checked>
+                <input class="filter-producer visually-hidden filter-input" type="checkbox" name="bosh" id="filter-bosh" checked>
                 <label for="filter-bosh">BOSCH</label>
               </li>
               <li class="filter-producer-item">
-                <input class="filter-producer" type="checkbox" name="interskol" id="filter-interskol">
+                <input class="filter-producer visually-hidden filter-input" type="checkbox" name="interskol" id="filter-interskol">
                 <label for="filter-interskol">ИНТЕРСКОЛ</label>
               </li>
               <li class="filter-producer-item">
-                <input class="filter-producer"  type="checkbox" name="makita" id="filter-makita" checked>
+                <input class="filter-producer visually-hidden filter-input"  type="checkbox" name="makita" id="filter-makita" checked>
                 <label for="filter-makita">MAKIta</label>
               </li>
               <li class="filter-producer-item">
-                <input class="filter-producer"  type="checkbox" name="dewalt" id="filter-dewalt">
+                <input class="filter-producer visually-hidden filter-input"  type="checkbox" name="dewalt" id="filter-dewalt">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li class="filter-producer-item">
-                <input class="filter-producer"  type="checkbox" name="hitachi" id="filter-hitachi">
+                <input class="filter-producer visually-hidden filter-input"  type="checkbox" name="hitachi" id="filter-hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -176,11 +180,11 @@
             <legend class="filter-power-head">ПИТАНИЕ:</legend>
             <ul class="filter-power-list">
               <li class="filter-power-item">
-                <input class="filter-power-supply" type="radio" value="rechargeable-batteries" name="type-of-power-supply" id="filter-rechargeable-batteries" checked>
+                <input class="filter-power-supply visually-hidden filter-input" type="radio" value="rechargeable-batteries" name="type-of-power-supply" id="filter-rechargeable-batteries" checked>
                 <label for="filter-rechargeable-batteries">Аккумуляторные</label>
               </li>
               <li class="filter-power-item">
-                <input class="filter-power-supply" type="radio" value="electric-grid" name="type-of-power-supply" id="filter-electric-grid">
+                <input class="filter-power-supply visually-hidden filter-input" type="radio" value="electric-grid" name="type-of-power-supply" id="filter-electric-grid">
                 <label for="filter-electric-grid">Сетевые</label>
               </li>
             </ul>
@@ -193,25 +197,25 @@
           <h2 class="sort-head">Сортировка:</h2>
           <ul class="sort-list">
             <li class="sort-item">
-              <a class="sort-link sort-link-current" href="#">По цене</a>
+              <a class="sort-link sort-link-current" href="#" aria-label="Сортировка товаров по цене">По цене</a>
             </li>
             <li class="sort-item">
-              <a class="sort-link" href="#">По типу</a>
+              <a class="sort-link" href="#" aria-label="Сортировка товаров по типу">По типу</a>
             </li>
             <li class="sort-item">
-              <a class="sort-link" href="#">По функицоналу</a>
+              <a class="sort-link" href="#" aria-label="Сортировка товаров по функционалу">По функицоналу</a>
             </li>
           </ul>
           <ul class="sort-arrow-list">
             <li class="sort-arrow-item">
-              <a class="sort-arrow-link sort-arrow-link-current" href="#">
+              <a class="sort-arrow-link sort-arrow-link-current" href="#" aria-label="Сортировка по цене: от меньшего к большему значению цены">
                 <svg class="icon-sort-arrow" width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L11 10H0"/>
                 </svg>
               </a>
             </li>
             <li class="sort-arrow-item">
-              <a class="sort-arrow-link" href="#">
+              <a class="sort-arrow-link" href="#" aria-label="Сортировка по цене: от большего к меньшему значению цены">
                 <svg class="icon-sort-arrow rotate"  width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L11 10H0"/>
                 </svg>
@@ -405,16 +409,16 @@
           </ul>
           <ul class="page-catalog-list">
             <li class="page-catalog-item">
-              <a class="page-catalog-current-link " href="#">1</a>
+              <a class="page-catalog-current-link" href="#" aria-label="Страница каталога номер 1">1</a>
             </li>
             <li class="page-catalog-item">
-              <a class="page-catalog-link" href="#">2</a>
+              <a class="page-catalog-link" href="#" aria-label="Страница каталога номер 2">2</a>
             </li>
             <li class="page-catalog-item">
-              <a class="page-catalog-link" href="#">3</a>
+              <a class="page-catalog-link" href="#" aria-label="Страница каталога номер 3">3</a>
             </li>
             <li class="page-catalog-item">
-              <a class="page-catalog-link page-catalog-link-next" href="#">СЛЕДУЮЩАЯ</a>
+              <a class="page-catalog-link page-catalog-link-next" href="#" aria-label="Следующая страница каталога">СЛЕДУЮЩАЯ</a>
             </li>
           </ul>
         </section>
@@ -433,16 +437,17 @@
 <footer>
   <section class="footer-top">
     <div class="footer-top-wrapper container">
-      <h2 class="visually-hidden">подвал</h2>
+      <h2 class="visually-hidden">Контактные данные</h2>
       <div>
-        <a class="footer-logo" href="index.html">
+        <a class="footer-logo" href="index.html" aria-label="Главная страница магазина Техномарт">
           <img class="footer-logo-img" src="img/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт">
         </a>
         <div class="footer-contacts-wrapper">
           <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a class="footer-phone" href="tel:+78125550555" aria-label="Телефон обратной связи">+7 (812) 555-05-55</a>
         </div>
       </div>
+      <h2 class="visually-hidden">Меню навигации</h2>
       <nav>
         <ul class="footer-nav-list-top">
           <li>
@@ -481,34 +486,34 @@
   <section class="footer-bottom-bar">
     <div class="container">
       <div class="footer-bottom">
-        <h2 class="visually-hidden">контакты и социальные сети</h2>
+        <h2 class="visually-hidden">Наши социальные сети</h2>
         <p class="footer-bottom-info">© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <div>
           <ul class="footer-social-list">
             <li class="footer-social-list-item">
               <a class="footer-social-link" href="#">
-                <img src="img/icon/icon-vk.svg" alt="мы во вконтакте" width="26" height="15">
+                <img src="img/icon/icon-vk.svg" alt="Мы во вконтакте" width="26" height="15">
               </a>
             </li>
             <li class="footer-social-list-item">
               <a class="footer-social-link" href="#">
-                <img src="img/icon/icon-fb.svg" alt="мы в фейсбуке" width="12" height="22">
+                <img src="img/icon/icon-fb.svg" alt="Мы в фейсбуке" width="12" height="22">
               </a>
             </li>
             <li class="footer-social-list-item">
               <a class="footer-social-link" href="#">
-                <img src="img/icon/icon-insta.svg" alt="мы в инстаграмме" width="21" height="21">
+                <img src="img/icon/icon-insta.svg" alt="Мы в инстаграмме" width="21" height="21">
               </a>
             </li>
           </ul>
         </div>
         <div class="footer-bottom-contacts">
           <p class="footer-contacts">Обратная связь:</p>
-          <a class="footer-contacts-link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a>
+          <a class="footer-contacts-link" href="mailto:mail@htmlacademy.ru" target="_blank" aria-label="Почта для обратной связи">mail@htmlacademy.ru</a>
         </div>
         <div class="footer-bottom-producer">
           <p class="footer-contacts">Разработано —</p>
-          <a class="footer-contacts-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
+          <a class="footer-contacts-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Разработанно при подержке">htmlacademy.ru</a>
         </div>
       </div>
     </div>

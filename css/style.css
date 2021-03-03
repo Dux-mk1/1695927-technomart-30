@@ -658,12 +658,19 @@ img {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  display: none;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .products-item:hover .product-buttons,
 .products-item:focus-within .product-buttons{
   display: block;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: auto;
 }
 
 .products-item:hover .img-product,
@@ -1673,6 +1680,8 @@ img {
 
 .home-page{
   position: relative;
+  width: 14px;
+  height: 12px;
 }
 
 .home-page::before{
@@ -1883,18 +1892,14 @@ img {
   padding: 0;
 }
 
-.filter-producer,
-.filter-power-supply{
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+.filter-input:focus{
+  clip: auto;
 }
 
-.filter-producer+label,
-.filter-power-supply+label{
-  display: inline-block;
-  vertical-align: top;
-  align-items: center;
+.filter-producer-item+label{
+  display: block;
+  position: relative;
+  cursor: pointer;
   user-select: none;
 }
 
