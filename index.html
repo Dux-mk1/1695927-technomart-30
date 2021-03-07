@@ -18,7 +18,7 @@
     <div class="top-head-bar">
       <div class="header container">
         <a class="main-logo-header" href="index.html" aria-label="Главная страница интернет магазина Техномарт">
-          <img class="main-logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
+          <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
         </a>
         <form class="search-form" action="https://echo.htmlacademy.ru/">
           <div class="search">
@@ -57,14 +57,14 @@
         <div class="login">
           <a class="enter-link" href="#" aria-label="Вход в личный кабинет">
             <svg aria-hidden="true" focusable="false" class="login-svg" width="20" height="17"  xmlns="http://www.w3.org/2000/svg"><path d="M14.1667 8.5L5.7143 0v6H0v5h5.7143v6l8.4524-8.5z"/><path d="M16.1771 15.01h-4.7876V17h4.7876c2.0743 0 2.861-1.81 2.8848-3.026V3.028C19.0381 1.811 18.2514 0 16.1771 0h-4.7876v1.99h4.7876c.7991 0 .9448.681.962 1.057v10.904c-.0162.376-.1629 1.059-.962 1.059z"/></svg>
-            <span class="enter">Войти</span>
+            <span>Войти</span>
           </a>
           <a class="registration-link" href="#" aria-label="Зарегистрировать личный кабинет">
-            <span class="registration">Регистрация</span>
+            <span>Регистрация</span>
           </a>
         </div>
       </section>
-      <section class="nav-head">
+      <section>
         <h2 class="visually-hidden">меню навигации</h2>
         <nav class="nav-header container">
           <ul class="nav-list">
@@ -95,44 +95,44 @@
     </div>
   </header>
   <main>
-    <section class="promo-block container">
+    <section class="container">
       <h2 class="visually-hidden">Промо-блок</h2>
       <ul class="promo-list-text">
         <li class="material-item promo-item new">
           <h3 class="promo-title">Материалы</h3>
           <a class="promo-button" href="#" aria-label="Материалы на любой вкус"> НА ЛЮБОЙ ВКУС</a>
         </li>
-        <li class="instrument-item promo-item ">
+        <li class="instrument-item promo-item">
           <h3 class="promo-title">Инструмент</h3>
           <a class="promo-button" href="#" aria-label="Инструменты на все случаи">НА ВСЕ СЛУЧАИ</a>
         </li>
-        <li class="cars-item promo-item ">
+        <li class="cars-item promo-item">
           <h3 class="promo-title">Техника</h3>
           <a class="promo-button" href="#" aria-label="Техника для стройки">ДЛЯ СТРОЙКИ</a>
         </li>
       </ul>
       <div class="promo-block-bottom">
         <div class="slider-tools">
-          <div class="slides-tools">
-            <div class="slide-tools slide-active">
-              <img class="img-slide" src="img/layer99.jpg" width="620" height="266" alt="Рабочий с перфоратором штрабит стену">
-              <h2 class="slide-head">Перфораторы</h2>
-              <p class="slide-text">Настоящие мужские игрушки</p>
-              <a class="button button-slide" href="catalog.html">Открыть каталог</a>
-            </div>
-            <div class="slide-tools">
+          <div>
+            <div class="slide-tools-first">
               <img class="img-slide" src="img/layer99-2.jpg" width="620" height="266" alt="Рабочий с дрелью сверлит стену">
               <h2 class="slide-head">Дрели</h2>
               <p class="slide-text">Соседям на радость!</p>
               <a class="button button-slide" href="catalog.html">Открыть каталог</a>
             </div>
+            <div class="slide-tools-second slide-active">
+              <img class="img-slide" src="img/layer99.jpg" width="620" height="266" alt="Рабочий с перфоратором штрабит стену">
+              <h2 class="slide-head">Перфораторы</h2>
+              <p class="slide-text">Настоящие мужские игрушки</p>
+              <a class="button button-slide" href="catalog.html">Открыть каталог</a>
+            </div>
           </div>
           <div class="controls-tools">
-            <button type="button" class="button-arrow" aria-label="Предыдущий слайд"></button>
-            <button type="button" class="button-arrow" aria-label="Следующий слайд"></button>
+            <button type="button" class="button-arrow-prev" aria-label="Предыдущий слайд"></button>
+            <button type="button" class="button-arrow-next" aria-label="Следующий слайд"></button>
             <div class="button-circle-wrapper">
-              <button type="button" class="button-circle button-current" aria-label="Первый слайд"></button>
-              <button type="button" class="button-circle" aria-label="Второй слайд"></button>
+              <button type="button" class="button-circle-first button-current" aria-label="Первый слайд"></button>
+              <button type="button" class="button-circle-second" aria-label="Второй слайд"></button>
             </div>
           </div>
         </div>
@@ -291,9 +291,9 @@
       </div>
       <div class="service-slider container">
         <div class="service-controls">
-          <button type="button" class="button-service button-service-current">Доставка</button>
-          <button type="button" class="button-service">Гарантия</button>
-          <button type="button" class="button-service">Кредит</button>
+          <button type="button" class="button-service button-service-first button-service-current">Доставка</button>
+          <button type="button" class="button-service button-service-second">Гарантия</button>
+          <button type="button" class="button-service button-service-third">Кредит</button>
         </div>
         <div class="service-slides">
           <div class="service-slide service-slide-image-1 slide-active">
@@ -307,7 +307,7 @@
           <div class="service-slide service-slide-image-3">
             <h3 class="service-header-text service-header-text-credit">Кредит</h3>
             <p class="service-slide-text service-slide-text-credit">Залезть в долговую яму стало проще! Кредитные&nbsp;консультанты придут вам на помощь.</p>
-            <button type="button" class="button button-border-radius">
+            <button type="button" class="button button-border-radius" aria-label="Отправить заявку для оформления кредита">
               <span class="button-credit-margin">Отправить заявку</span>
             </button>
           </div>
@@ -426,7 +426,7 @@
   <div class="popup-map">
     <h2 class="visually-hidden">Интерактивная карта с нашим адрессом</h2>
     <button class="close-popup-map" type="button" value="close-popup">
-      <span class="visually-hidden">Закрыть</span>
+      <span class="visually-hidden">Закрыть интерактивную карту</span>
     </button>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="942" height="442" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
   </div>
@@ -441,19 +441,19 @@
           <label for="popup-feedback-name">
             <span>Ваше имя:</span>
           </label>
-          <input id="popup-feedback-name" class="placeholder-popup border-label-popup-feedback" type="text" placeholder="Имя Фамилия">
+          <input name="User name" id="popup-feedback-name" class="user-name placeholder-popup border-label-popup-feedback" type="text" placeholder="Имя Фамилия">
         </li>
         <li class="popup-feedback-item">
           <label for="popup-feedback-email">
             <span>Ваш e-mail:</span>
           </label>
-          <input id="popup-feedback-email" class="placeholder-popup border-label-popup-feedback" type="email" placeholder="email@example.com">
+          <input name="User email" id="popup-feedback-email" class="user-email placeholder-popup border-label-popup-feedback" type="email" placeholder="email@example.com">
         </li>
         <li class="popup-feedback-item popup-feedback-item-letter">
           <label for="popup-feedback-letter">
             <span>Текст письма:</span>
           </label>
-          <textarea id="popup-feedback-letter" class="placeholder-popup placeholder-popup-textarea border-label-popup-feedback" placeholder="В свободной форме"></textarea>
+          <textarea name="Text letter" id="popup-feedback-letter" class="text-letter placeholder-popup placeholder-popup-textarea border-label-popup-feedback" placeholder="В свободной форме"></textarea>
         </li>
       </ul>
       <div class="popup-feedback-button-wrapper">
@@ -461,5 +461,17 @@
       </div>
     </form>
   </div>
+  <div class="popup-basket">
+    <button class="close-popup-basket" type="button" value="close-popup">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <p class="popup-basket-text">Товар добавлен в корзину!</p>
+    <div class="buttons-popup-basket-wrapper"></div>
+    <p class="buttons-popup-basket">
+      <a class="button" href="#">оформить заказ</a>
+      <button class="button-popup-basket" type="button" value="close">продолжить покупки</button>
+    </p>
+  </div>
+  <script src="js/main.js" type="module"></script>
   </body>
 </html>
