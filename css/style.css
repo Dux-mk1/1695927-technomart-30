@@ -848,6 +848,8 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
+  z-index: 1;
+  background-color: var(--white);
 }
 
 .products-item:hover .product-buttons{
@@ -1594,7 +1596,7 @@ img {
   box-shadow: var(--shadow-product-buy);
   color: var(--white);
   position: relative;
-  min-width: 135px;
+  max-width: 135px;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1644,7 +1646,7 @@ img {
   box-sizing: border-box;
   border-radius: 2px;
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2573,6 +2575,7 @@ img {
   display: none;
   -webkit-filter: drop-shadow(0px 20px 40px var(--shadow-popup));
   filter: drop-shadow(0px 20px 40px var(--shadow-popup));
+  z-index: 100;
 }
 
 .button-popup-basket{
@@ -2668,6 +2671,7 @@ img {
   -webkit-filter: drop-shadow(0px 20px 40px var(--shadow-popup));
   filter: drop-shadow(0px 20px 40px var(--shadow-popup));
   display: none;
+  z-index: 100;
 }
 
 .popup-map,
@@ -2686,6 +2690,7 @@ img {
   display: none;
   -webkit-filter: drop-shadow(0px 20px 40px var(--shadow-popup));
   filter: drop-shadow(0px 20px 40px var(--shadow-popup));
+  z-index: 100;
 }
 
 .popup-map iframe{
